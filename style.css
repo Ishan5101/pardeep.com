@@ -1,0 +1,154 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    row-gap: 3rem;
+    background-color: rgba(8, 242, 226, 0.39);
+    border: yellow solid 10px;
+}
+.ult {
+    background-color: black;
+}
+a {
+    text-decoration: none;
+    color: white;
+    text-align: right;
+}
+
+a:hover {
+    color: rgb(255, 149, 0);
+
+}
+.item {
+
+    padding: 2rem;
+    color: white;
+    margin-left: 2rem;
+    font-size: 2rem;
+    transition: all 1s;
+    text-align: right;
+}
+
+.item:hover{
+    transform: scale(1.2);
+}
+
+
+
+ @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgb(241, 7, 7), 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #FFF, 0 0 30px #ffa34d, 0 0 40px  #ffc44d, 0 0 50px  #ffa34d, 0 0 60px #ff854d, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  .glow {
+    font-size: 80px;
+    color: black;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    position: relative;
+    nav-down:10px;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+  
+  /* The progress container (grey background) */
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 5px;
+    background: #04AA6D;
+    width: 0%;
+  }
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 5px solid #f60606;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.div {
+    background-color: black;
+    border: 15px solid rgb(236, 244, 6);
+    padding: 2rem;
+    position: absolute;
+    top:310px;
+    color: white;
+    left:500px;
+    margin-left: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
